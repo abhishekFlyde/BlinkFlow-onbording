@@ -33,7 +33,7 @@ export default function Page() {
               </div>
 
               <Typography
-                variant="h1"
+                variant="subtitleSizeBase"
                 colorVariant="white1"
                 className="mb-[24px]"
               >
@@ -41,7 +41,7 @@ export default function Page() {
               </Typography>
 
               <Typography
-                variant="h3"
+                variant="subheadingSizeMedium"
                 colorVariant="white2"
                 className="hero__desc"
               >
@@ -55,7 +55,7 @@ export default function Page() {
                     <span className="hero__icon">
                       <img src="https://ik.imagekit.io/a9uxeuyhx/Icon%20(10).png" />
                     </span>
-                    <Typography variant="body-2" colorVariant="white1">
+                    <Typography variant="bodySizeMedium" colorVariant="white1">
                       {text}
                     </Typography>
                   </div>
@@ -66,11 +66,11 @@ export default function Page() {
             {/* Right */}
             <div className="w-[448px]">
               <GlassContainer>
-                <Typography variant="h1" colorVariant="white">
+                <Typography variant="subtitleSizeBase" colorVariant="white">
                   Get Started Free
                 </Typography>
                 <br />
-                <Typography variant="h2" colorVariant="white">
+                <Typography variant="bodySizeMedium" colorVariant="white">
                   Launch-ready landing pages. Zero effort.
                 </Typography>
                 <br />
@@ -84,11 +84,11 @@ export default function Page() {
                 </Button>
                 <Button variant="link" >click kro link ko</Button>
                 <br />
-                <Typography variant="body-2" colorVariant="white">
+                <Typography variant="subheadingSizeMedium" colorVariant="white">
                   Enter your number to receive instant access
                 </Typography>
                 <br />
-                <Typography variant="body-3" colorVariant="white">
+                <Typography variant="bodySizeSmall" colorVariant="white">
                   By signing up, you agree to our Terms of Service
                 </Typography>
               </GlassContainer>
