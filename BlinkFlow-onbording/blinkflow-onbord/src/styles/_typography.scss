@@ -9,41 +9,28 @@
 }
 
 /* ✅ Heading Variants */
-.h1 {
-  font-family: var(--font-inter);
-  font-weight: 400;
-  font-size: fluid(24px, 32px);
-  line-height: 120%;
-}
-.h2 {
+.subtitle-size-base {
   font-family: var(--font-inter);
   font-weight: 400;
   font-size: fluid(24px, 32px);
   line-height: 120%;
 }
 
-.h3 {
+.subheading-size-medium {
   font-family: var(--font-inter);
   font-weight: 400;
   font-size: fluid(16px, 20px);
   line-height: 120%;
 }
 
-/* ✅ Body Variants */
-.body-1 {
-    font-family: var(--font-inter);
-    font-weight: 400;
-    font-size: fluid(20px, 20px);
-    line-height: 120%;
-}
-.body-2 {
+.body-size-medium {
   font-family: var(--font-inter);
   font-weight: 400;
   font-size: fluid(16px, 16px);
   line-height: 140%;
 }
 
-.body-3 {
+.body-size-small {
   font-family: var(--font-inter);
   font-weight: 400;
   font-size: fluid(14px, 14px);

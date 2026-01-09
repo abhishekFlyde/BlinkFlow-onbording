@@ -4,29 +4,35 @@ const colorMap = {
   black: "#000000",
   white: "#FFFFFF",
   white1: "#FFFFFFE5",
-  white2:" #FFFFFFB2",
+  white2: "#FFFFFFB2",
   gray: "#636363",
   primary: "#CCEF55",
   secondary: "#AAAAAA",
-}; 
+};
 
+const variantClassMap = {
+  subtitleSizeBase: "subtitle-size-base", // 32px
+  subheadingSizeMedium: "subheading-size-medium", // 20px
+  bodySizeMedium: "body-size-medium", // 16px
+  bodySizeSmall: "body-size-small", // 14px
+};
 
 const Typography = ({
   variant = "body-2",
   as,
   children,
   className,
-  colorVariant = "black", 
+  colorVariant = "black",
   ...props
 }) => {
   const Tag = as || getDefaultTag(variant);
 
   return (
     <Tag
-      className={clsx(variant, className)}
+      className={clsx(variantClassMap[variant], className)}
       style={{
         whiteSpace: "pre-line",
-        color: colorMap[colorVariant] || colorMap.black, // apply variant color
+        color: colorMap[colorVariant] || colorMap.black,
       }}
       {...props}
     >
@@ -37,19 +43,12 @@ const Typography = ({
 
 function getDefaultTag(variant) {
   const map = {
-    h1: "h1",
-    h2: "h2",
-    h3: "h3",
-    h4: "h4",
-    h5: "h5",
-    h6: "h6",
-    "body-1": "p",
-    "body-2": "p",
-    "body-3": "p",
-    "body-4": "p",
-    "body-5": "p",
-    "text-link": "p",
+    subtitleSizeBase: "h1",
+    subheadingSizeMedium: "h2",
+    bodySizeMedium: "p",
+    bodySizeSmall: "p",
   };
+
   return map[variant] || "p";
 }
 
