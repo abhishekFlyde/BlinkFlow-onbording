@@ -3,10 +3,13 @@ import clsx from "clsx";
 const colorMap = {
   black: "#000000",
   white: "#FFFFFF",
+  white1: "#FFFFFFE5",
+  white2:" #FFFFFFB2",
   gray: "#636363",
   primary: "#CCEF55",
   secondary: "#AAAAAA",
-};
+}; 
+
 
 const Typography = ({
   variant = "body-2",
