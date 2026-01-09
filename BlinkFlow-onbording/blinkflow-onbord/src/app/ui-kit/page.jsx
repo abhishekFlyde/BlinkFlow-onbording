@@ -1,4 +1,4 @@
-import Typography from "@/app/Components/ui-kit/typography";
+import Typography from "@/Components/ui-kit/typography";
 
 export default function UiKitPage() {
   return (
