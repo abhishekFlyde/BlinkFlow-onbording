@@ -5,18 +5,18 @@ const Button = ({
   children,
   variant = "primary",
   size = "md",
-  icon,
+  icon, // Arrow ya koi icon
   iconPosition = "right",
-  showIcon,
+  showIcon, // optional override
   className,
   as,
   disabled,
   ...props
 }) => {
-  const shouldShowIcon =
-    showIcon !== undefined ? showIcon : variant === "primary";
-
   const Tag = as || "button";
+
+  // ✅ Only show icon if variant is "primary"
+  const shouldShowIcon = variant === "primary" && (showIcon ?? true);
 
   return (
     <Tag
@@ -26,34 +26,24 @@ const Button = ({
         `btn--${variant}`,
         `btn--${size}`,
         disabled && "btn--disabled",
-        icon && shouldShowIcon && variant !== "link" && "btn--with-icon",
+        icon && shouldShowIcon && "btn--with-icon",
         className
       )}
       {...props}
     >
-      {/* icon left */}
-      {icon &&
-        shouldShowIcon &&
-        iconPosition === "left" &&
-        variant !== "link" && (
-          <span className={variant === "white" ? "btn-icon-white" : "btn-icon"}>
-            {icon}
-          </span>
-        )}
+      {/* Icon left */}
+      {icon && shouldShowIcon && iconPosition === "left" && (
+        <span className="btn-icon">{icon}</span>
+      )}
 
-      <span className={variant.startsWith("link") ? "body-3" : "h4"}>
+      <span className={variant.startsWith("link") }>
         {children}
       </span>
 
-      {/* icon right */}
-      {icon &&
-        shouldShowIcon &&
-        iconPosition === "right" &&
-        variant !== "link" && (
-          <span className={variant === "white" ? "btn-icon-white" : "btn-icon"}>
-            {icon}
-          </span>
-        )}
+      {/* Icon right */}
+      {icon && shouldShowIcon && iconPosition === "right" && (
+        <span className="btn-icon">{icon}</span>
+      )}
     </Tag>
   );
 };
