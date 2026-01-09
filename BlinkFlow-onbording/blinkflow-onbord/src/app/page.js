@@ -79,14 +79,10 @@ export default function Page() {
                   design or coding skills needed.
                 </Typography>
                 <br />
-                <Button
-                 
-                  variant="primary"
-                  size="md"
-                  icon={<ArrowRight />}
-                >
-                  Start Journey
+                <Button variant="primary" showIcon={true} icon={<ArrowRight />}>
+                  Next
                 </Button>
+                <Button variant="link" >click kro link ko</Button>
                 <br />
                 <Typography variant="body-2" colorVariant="white">
                   Enter your number to receive instant access
