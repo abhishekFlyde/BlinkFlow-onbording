@@ -6,6 +6,7 @@ export default function GlassContainer({ children, className, variant = "primary
   };
 
   return (
+    
     <div className={clsx(`glass-container ${variants[variant]} ${className}`)}>
       {children}
     </div>
