@@ -1,5 +1,5 @@
-import Typography from "@/app/Components/ui-kit/typography";
-import GlassContainer from "@/app/Components/ui-kit/glassContainer";
+import Typography from "@/Components/ui-kit/typography";
+import GlassContainer from "@/Components/ui-kit/glassContainer";
 
 export default function UiKitPage() {
   return (
