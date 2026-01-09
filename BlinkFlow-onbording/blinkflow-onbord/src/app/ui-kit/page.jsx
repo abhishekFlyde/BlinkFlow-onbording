@@ -4,24 +4,29 @@ import GlassContainer from "@/Components/ui-kit/glassContainer";
 export default function UiKitPage() {
   return (
     <>
-    <div>
-      <Typography variant="subtitleSizeBase">Get Started Free</Typography>
-      <br />
-      <Typography variant="subheadingSizeMedium">
-        Launch-ready landing pages. Zero effort.
-      </Typography>
-      <br />
-      <Typography variant="bodySizeMedium">
-        Create beautiful, high-converting landing pages in minutes. No design or
-        coding skills needed.
-      </Typography>
-      <br />
-      <Typography variant="bodySizeSmall">Next</Typography>
-    </div>
-    {/* Components */}
-    <div>
-        <div className="bg-[url(https://cdn.pixabay.com/photo/2026/01/04/08/24/moon-10051671_640.jpg)] bg-cover bg-center bg-no-repeat">
-        <GlassContainer>
+      <div>
+        <Typography variant="subtitleSizeBase">Get Started Free</Typography>
+        <br />
+        <Typography variant="subheadingSizeMedium">
+          Launch-ready landing pages. Zero effort.
+        </Typography>
+        <br />
+        <Typography variant="bodySizeMedium">
+          Create beautiful, high-converting landing pages in minutes. No design
+          or coding skills needed.
+        </Typography>
+        <br />
+        <Typography variant="bodySizeSmall">Next</Typography>
+      </div>
+      {/* Components */}
+
+      <div className="relative min-h-screen">
+        {/* Background layer */}
+        <div className="absolute inset-0 bg-[url(https://cdn.pixabay.com/photo/2026/01/04/08/24/moon-10051671_640.jpg)] bg-cover bg-center bg-no-repeat" />
+
+        {/* Glass content */}
+        <div className="relative z-10 flex items-center justify-center min-h-screen">
+          <GlassContainer>
             <Typography variant="h1">Get Started Free</Typography>
             <br />
             <Typography variant="h2">
@@ -42,9 +47,9 @@ export default function UiKitPage() {
             <Typography variant="body-3">
               By signing up, you agree to our Terms of Service
             </Typography>
-        </GlassContainer>
+          </GlassContainer>
         </div>
-    </div>
+      </div>
     </>
   );
 }

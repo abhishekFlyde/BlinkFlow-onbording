@@ -80,7 +80,6 @@ export default function Page() {
                 </Typography>
                 <br />
                 <Button
-                 
                   variant="primary"
                   size="md"
                   icon={<ArrowRight />}
